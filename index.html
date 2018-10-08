@@ -39,17 +39,17 @@
                 return 0;
             }
         }
-        
+
         btns.forEach((btn) => {
             btn.addEventListener('click', () => {
                 let result = playRound(btn.textContent, computerPlay());
                 
                 if(result === 1){
-                    results[0].textContent = results[0].textContent.substr(0,'Wins: '.length) + ++gamesWon;
+                    results[0].textContent = 'Wins: ' + ++gamesWon;
                 }else if(result === -1){
-                    results[1].textContent = results[1].textContent.substr(0,'Losses: '.length) + ++gamesLost;
+                    results[1].textContent = 'Losses: ' + ++gamesLost;
                 }else if(result === 0){
-                    results[2].textContent = results[2].textContent.substr(0,'Draws: '.length) + ++gamesDrawn;
+                    results[2].textContent ='Draws: ' + ++gamesDrawn;
                 }
 
                 if(gamesWon === 5){
